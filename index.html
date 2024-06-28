@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Marketplace</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header class="container mt-3">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container" style="padding:0px;">
+                <a href="index.html">
+                    <span class="navbar-brand"><svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 8.4502C3.55228 8.4502 4 8.89791 4 9.4502V22.0002H22V9.4502C22 8.89791 22.4477 8.4502 23 8.4502C23.5523 8.4502 24 8.89791 24 9.4502V22.0002C24 22.5306 23.7893 23.0393 23.4142 23.4144C23.0391 23.7895 22.5304 24.0002 22 24.0002H4C3.46957 24.0002 2.96086 23.7895 2.58579 23.4144C2.21071 23.0393 2 22.5306 2 22.0002V9.4502C2 8.89791 2.44772 8.4502 3 8.4502Z" fill="#A259FF"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H25C25.5523 0 26 0.447715 26 1C26 1.55228 25.5523 2 25 2H1C0.447715 2 0 1.55228 0 1Z" fill="#A259FF"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1 3C1.55228 3 2 3.44772 2 4V6C2 6.79565 2.31607 7.55871 2.87868 8.12132C3.44129 8.68393 4.20435 9 5 9C5.79565 9 6.55871 8.68393 7.12132 8.12132C7.68393 7.55871 8 6.79565 8 6V4C8 3.44772 8.44772 3 9 3C9.55229 3 10 3.44772 10 4V6C10 7.32608 9.47322 8.59785 8.53553 9.53553C7.59785 10.4732 6.32608 11 5 11C3.67392 11 2.40215 10.4732 1.46447 9.53553C0.526784 8.59785 0 7.32608 0 6V4C0 3.44772 0.447715 3 1 3Z" fill="#A259FF"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9 3C9.55228 3 10 3.44772 10 4V6C10 6.79565 10.3161 7.55871 10.8787 8.12132C11.4413 8.68393 12.2044 9 13 9C13.7956 9 14.5587 8.68393 15.1213 8.12132C15.6839 7.55871 16 6.79565 16 6V4C16 3.44772 16.4477 3 17 3C17.5523 3 18 3.44772 18 4V6C18 7.32608 17.4732 8.59785 16.5355 9.53553C15.5979 10.4732 14.3261 11 13 11C11.6739 11 10.4021 10.4732 9.46447 9.53553C8.52678 8.59785 8 7.32608 8 6V4C8 3.44772 8.44772 3 9 3Z" fill="#A259FF"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17 3C17.5523 3 18 3.44772 18 4V6C18 6.79565 18.3161 7.55871 18.8787 8.12132C19.4413 8.68393 20.2044 9 21 9C21.7956 9 22.5587 8.68393 23.1213 8.12132C23.6839 7.55871 24 6.79565 24 6V4C24 3.44772 24.4477 3 25 3C25.5523 3 26 3.44772 26 4V6C26 7.32608 25.4732 8.59785 24.5355 9.53553C23.5979 10.4732 22.3261 11 21 11C19.6739 11 18.4021 10.4732 17.4645 9.53553C16.5268 8.59785 16 7.32608 16 6V4C16 3.44772 16.4477 3 17 3Z" fill="#A259FF"></path>
+                    </svg> NFT Marketplace</span>
+                </a>
+                
+                <button style="border: none !important;" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#myNav">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 12C3 11.5858 3.33579 11.25 3.75 11.25H20.25C20.6642 11.25 21 11.5858 21 12C21 12.4142 20.6642 12.75 20.25 12.75H3.75C3.33579 12.75 3 12.4142 3 12Z" fill="white" data-darkreader-inline-fill="" style="--darkreader-inline-fill: #e8e6e3;"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 6C3 5.58579 3.33579 5.25 3.75 5.25H15C15.4142 5.25 15.75 5.58579 15.75 6C15.75 6.41421 15.4142 6.75 15 6.75H3.75C3.33579 6.75 3 6.41421 3 6Z" fill="white" data-darkreader-inline-fill="" style="--darkreader-inline-fill: #e8e6e3;"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 18C3 17.5858 3.33579 17.25 3.75 17.25H15C15.4142 17.25 15.75 17.5858 15.75 18C15.75 18.4142 15.4142 18.75 15 18.75H3.75C3.33579 18.75 3 18.4142 3 18Z" fill="white" data-darkreader-inline-fill="" style="--darkreader-inline-fill: #e8e6e3;"></path>
+                    </svg>
+                </button>
+
+                <div class="collapse navbar-collapse" id="myNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="navbar-nav-item">
+                            <a href="marketplace.html">Marketplace</a>
+                        </li>
+                        <li class="navbar-nav-item">
+                            <a href="rankings.html">Rankings</a>
+                        </li>
+                        <li class="navbar-nav-item">
+                            <a href="wallet.html">Connect a wallet</a>
+                        </li>
+                        <li class="navbar-nav-item">
+                            <a href="account.html"> 
+                                <button style="color:white;" class="nav_button">
+                                    Sign up
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section1 container-fluid">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="content col-md-6 col-sm-12 col-xs-12">
+                    <div class="col-md-12 col-sm-12 mt-3">
+                        <h1>Discover digital art & Collect NFTs</h1>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <p>NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.</p>
+                    </div>
+                    <div class="button_div col-md-12 col-sm-push-12">
+                        <button class="section1_button d-flex justify-content-center align-items-center"><img src="./images/RocketLaunch.svg" alt="rocket icon">Get Started</button>
+                    </div>
+                    <div class="followers col-md-12 col-sm-12 d-flex justify-content-between">
+                        <div>
+                            <h4>240K+</h4>
+                            <p>Total Sale</p>
+                        </div>
+                        <div>
+                            <h4>100K+</h4>
+                            <p>Auctions</p>
+                        </div>
+                        <div>
+                            <h4>240K+</h4>
+                            <p>Artists</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content1 col-md-6 col-sm-12 mt-3">
+                    <div class="giff">
+                        <img src="./images/heroanimationtransparentbck-2.gif" alt="image of space">
+                    </div>
+                    <div class="for_mobile">
+                        <div class="button_div1">
+                            <button class="section1_button d-flex justify-content-center align-items-center"><svg class="rocket" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.17053 12.4491C6.28055 12.7763 6.10451 13.1307 5.77734 13.2408C4.71792 13.597 4.15489 14.4864 3.85373 15.3908C3.73414 15.7499 3.66189 16.0956 3.61848 16.3814C3.90434 16.338 4.25006 16.2658 4.60917 16.1462C5.51355 15.845 6.4029 15.282 6.75916 14.2226C6.86918 13.8954 7.2236 13.7194 7.55078 13.8294C7.87795 13.9394 8.05399 14.2938 7.94396 14.621C7.4096 16.21 6.08801 16.9712 5.00411 17.3322C4.45655 17.5145 3.94395 17.6045 3.5698 17.6494C3.38182 17.672 3.22641 17.6834 3.116 17.6892C3.06074 17.6921 3.01658 17.6936 2.98505 17.6944C2.96928 17.6948 2.95666 17.695 2.94737 17.6951L2.93596 17.6952L2.93217 17.6952L2.93077 17.6952L2.93019 17.6952C2.92993 17.6952 2.92969 17.6952 2.92969 17.0702C2.30469 17.0702 2.30469 17.07 2.30469 17.0697L2.30469 17.0692L2.30469 17.0678L2.30471 17.064L2.30481 17.0526C2.30493 17.0433 2.30514 17.0306 2.30553 17.0149C2.30631 16.9833 2.30782 16.9392 2.31072 16.8839C2.31653 16.7735 2.32797 16.6181 2.35052 16.4301C2.3954 16.056 2.48542 15.5434 2.66776 14.9958C3.0287 13.9119 3.78989 12.5903 5.37891 12.056C5.70608 11.9459 6.0605 12.122 6.17053 12.4491ZM2.92969 17.0702H2.30469C2.30469 17.4154 2.58451 17.6952 2.92969 17.6952V17.0702Z" fill="white" data-darkreader-inline-fill="" style="--darkreader-inline-fill: #e8e6e3;"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5462 3.45406C15.8207 3.34943 14.035 3.31002 12.2075 5.13753L7.34476 10.0003L9.99994 12.6555L14.8627 7.79271C16.6902 5.9652 16.6508 4.17951 16.5462 3.45406ZM16.7274 2.21727C15.7297 2.07282 13.5057 2.07157 11.3236 4.25365L6.01893 9.55834C5.90172 9.67555 5.83588 9.83452 5.83588 10.0003C5.83588 10.166 5.90172 10.325 6.01893 10.4422L9.558 13.9813C9.80208 14.2254 10.1978 14.2254 10.4419 13.9813L15.7466 8.67659C17.9286 6.49452 17.9274 4.27052 17.7829 3.27282C17.7464 3.0058 17.6234 2.75803 17.4328 2.5674C17.2422 2.37678 16.9944 2.25382 16.7274 2.21727Z" fill="white" data-darkreader-inline-fill="" style="--darkreader-inline-fill: #e8e6e3;"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.4219 8.49243C14.7671 8.49243 15.0469 8.77225 15.0469 9.11743V14.1643L15.0468 14.1732C15.0421 14.5015 14.9085 14.8147 14.6749 15.0452L12.1526 17.5753C11.9925 17.7352 11.792 17.8486 11.5724 17.9035C11.3529 17.9584 11.1225 17.9527 10.906 17.8869C10.6895 17.8212 10.4948 17.6978 10.3429 17.5301C10.1911 17.3625 10.0875 17.1569 10.0433 16.9351C10.0433 16.935 10.0434 16.9353 10.0433 16.9351L9.38719 13.6622C9.31934 13.3237 9.5387 12.9944 9.87714 12.9265C10.2156 12.8587 10.545 13.078 10.6128 13.4165L11.2692 16.6909L13.7969 14.1554V9.11743C13.7969 8.77225 14.0767 8.49243 14.4219 8.49243Z" fill="white" data-darkreader-inline-fill="" style="--darkreader-inline-fill: #e8e6e3;"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.82698 4.95319L5.83588 4.95312H10.8828C11.2279 4.95312 11.5078 5.23295 11.5078 5.57812C11.5078 5.9233 11.2279 6.20312 10.8828 6.20312H5.84472L5.83967 6.20828L5.83964 6.20825L3.30933 8.73075L3.3103 8.73094L6.58373 9.38719C6.92218 9.45504 7.14154 9.78441 7.07369 10.1229C7.00584 10.4613 6.67647 10.6807 6.33803 10.6128L3.06556 9.95675C3.06537 9.95671 3.06518 9.95668 3.065 9.95664C2.84325 9.91244 2.63764 9.80892 2.47006 9.65711C2.30235 9.50516 2.17903 9.31054 2.11327 9.094C2.04751 8.87746 2.04176 8.64712 2.09665 8.42757C2.15154 8.20802 2.265 8.00749 2.42493 7.84738L2.42587 7.84644L2.42587 7.84644L4.95498 5.32514C5.18549 5.09151 5.49869 4.95786 5.82698 4.95319Z" fill="white" data-darkreader-inline-fill="" style="--darkreader-inline-fill: #e8e6e3;"></path>
+                            </svg>Get Started</button>
+                        </div>
+                        <div class="followers_mobile col-md-12 col-sm-12 d-flex justify-content-between">
+                            <div>
+                                <h4>240K+</h4>
+                                <p>Total Sale</p>
+                            </div>
+                            <div>
+                                <h4>100K+</h4>
+                                <p>Auctions</p>
+                            </div>
+                            <div>
+                                <h4>240K+</h4>
+                                <p>Artists</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid section2">
+        <div class="container sec2_container">
+            <div class="row">
+                <div class="sec2_header col-md-12 col-sm-12">
+                    <h3>Trending Collection</h3>
+                    <p>Checkout our weekly updated trending collection.</p>
+                </div>
+            </div>
+
+
+            <div class="row mt-5 sec2_forMobile">
+                <div class="col-md-4 col-sm-12 col-12 MrFox">
+                    <div>
+                        <div>
+                           <a href="collection.html"><img style="width: 100%;" class="dog" src="./images/dog.png" alt="image of dog"></a>
+                        </div>
+                        <div class="d-flex mt-3">
+                            <div>
+                                <img class="animalsForMobile" style="margin-right: 15px;" src="./images/cat.png" alt="image of cat">
+                            </div>
+                            <div>
+                                <img class="animalsForMobile" style="margin-right: 15px;" src="./images/bear.png" alt="image of bear">
+                            </div>
+                            <div class="amount d-none d-lg-flex">
+                                <h5>1025+</h5>
+                            </div>
+                            <div class="amount d-flex d-md-none">
+                                <h5>1025+</h5>
+                            </div>
+                        </div>
+                        <div class="image_footer">
+                            <div>
+                                <h5>DSGN Animals</h5>
+                            </div>
+                            <div>
+                                <p><img style="margin-right: 12px;" src="./images/fox.png" alt="image of fox">MrFox</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-12 col-12 MrFox">
+                    <div>
+                        <div>
+                           <a href="collection.html"><img style="width: 100%;" class="dog" src="./images/main_mushroom.png" alt="image of dog"></a>
+                        </div>
+                        <div class="d-flex mt-3">
+                            <div>
+                                <img class="animalsForMobile" style="margin-right: 15px;" src="./images/secondary_mashroom1.png" alt="image of cat">
+                            </div>
+                            <div>
+                                <img class="animalsForMobile" style="margin-right: 15px;" src="./images/secondary_mashroom2.png" alt="image of bear">
+                            </div>
+                            <div class="amount d-none d-lg-flex">
+                                <h5>1025+</h5>
+                            </div>
+                            <div class="amount d-flex d-md-none">
+                                <h5>1025+</h5>
+                            </div>
+                        </div>
+                        <div class="image_footer">
+                            <div>
+                                <h5>Magic Mashrooms</h5>
+                            </div>
+                            <div>
+                                <p><img style="margin-right: 12px;" src="./images/person_avatar.png" alt="image of fox">Shroomie</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12 col-12 MrFox">
+                    <div>
+                        <div>
+                           <a href="collection.html"><img style="width: 100%;" class="dog" src="./images/main_person.png" alt="image of dog"></a>
+                        </div>
+                        <div class="d-flex mt-3">
+                            <div>
+                                <img class="animalsForMobile" style="margin-right: 15px;" src="./images/secondary_person1.png" alt="image of cat">
+                            </div>
+                            <div>
+                                <img class="animalsForMobile" style="margin-right: 15px;" src="./images/secondary_person2.png" alt="image of bear">
+                            </div>
+                            <div class="amount d-none d-lg-flex">
+                                <h5>1025+</h5>
+                            </div>
+                            <div class="amount d-flex d-md-none">
+                                <h5>1025+</h5>
+                            </div>
+                        </div>
+                        <div class="image_footer">
+                            <div>
+                                <h5>Disco Machines</h5>
+                            </div>
+                            <div>
+                                <p><img style="margin-right: 12px;" src="./images/robot_avatar.png" alt="image of fox">BeKind2Robots</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section3 container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="sec3_header col-md-8 col-sm-12">
+                    <h3>Top creators</h3>
+                    <p>Checkout Top Rated Creators on the NFT Marketplace</p>
+                </div>
+                <div class="col-md-4 sec3_button">
+                    <button class="d-flex justify-content-center align-items-center"><img style="margin-right: 12px;" src="./images/RocketLaunch.svg" alt="rocket">View Rankings</button>
+                </div>
+            </div>
+
+            <div class="sec3_main_div row mt-5">
+                <div class="col-md-3 col-sm-12">
+                    <a class="profile_page" href="ArtistPage.html">
+                        <div class="profiles prof1">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="number">
+                                    <span>1</span>
+                                </div>
+                                <div class="d-flex justify-content-center position-relative">
+                                    <img class="prof_img" src="./images/profile_picture1.png" alt="profile picture">
+                                    <div class="number1">
+                                        <span>1</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="profile_name justify-content-center">
+                                    <h5>Keepitreal</h5>
+                                </div>
+                                <div class="profile_info justify-content-center">
+                                    <p><span>Total Sales:</span>34.53 ETH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <a class="profile_page" href="ArtistPage.html">
+                        <div class="profiles prof1">
+                            <div class="d-flex justify-content-center">
+                                <div class="number">
+                                    <span>2</span>
+                                </div>
+                                <div class="d-flex justify-content-center position-relative">
+                                    <img class="prof_img" src="./images/profile_picture2.png" alt="profile picture">
+                                    <div class="number1">
+                                        <span>2</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="profile_name justify-content-center">
+                                    <h5>DigiLab</h5>
+                                </div>
+                                <div class="profile_info justify-content-center">
+                                    <p><span>Total Sales:</span>34.53 ETH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <a class="profile_page" href="ArtistPage.html">
+                        <div class="profiles prof1">
+                            <div class="d-flex justify-content-center">
+                                <div class="number">
+                                    <span>3</span>
+                                </div>
+                                <div class="d-flex justify-content-center position-relative">
+                                    <img class="prof_img" src="./images/profile_picture3.png" alt="profile picture">
+                                    <div class="number1">
+                                        <span>3</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="profile_name justify-content-center">
+                                    <h5>GravityOne</h5>
+                                </div>
+                                <div class="profile_info justify-content-center">
+                                    <p><span>Total Sales:</span>34.53 ETH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <a class="profile_page" href="ArtistPage.html">
+                        <div class="profiles prof1">
+                            <div class="d-flex justify-content-center">
+                                <div class="number">
+                                    <span>4</span>
+                                </div>
+                                <div class="d-flex justify-content-center position-relative">
+                                    <img class="prof_img" src="./images/profile_picture4.png" alt="profile picture">
+                                    <div class="number1">
+                                        <span>4</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="profile_name justify-content-center">
+                                    <h5>Juanie</h5>
+                                </div>
+                                <div class="profile_info justify-content-center">
+                                    <p><span>Total Sales:</span>34.53 ETH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-12">
+                        <a class="profile_page" href="ArtistPage.html">
+                            <div class="profiles prof1 mt-5">
+                                <div class="d-flex justify-content-center">
+                                    <div class="number">
+                                        <span>5</span>
+                                    </div>
+                                    <div class="d-flex justify-content-center position-relative">
+                                        <img class="prof_img" src="./images/profile_picture5.png" alt="profile picture">
+                                        <div class="number1">
+                                            <span>5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile_name justify-content-center">
+                                        <h5>BlueWhale</h5>
+                                    </div>
+                                    <div class="profile_info justify-content-center">
+                                        <p><span>Total Sales:</span>34.53 ETH</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-12 prof">
+                        <a class="profile_page" href="ArtistPage.html">
+                            <div class="profiles mt-5">
+                                <div class="d-flex justify-content-center">
+                                    <div class="number">
+                                        <span>6</span>
+                                    </div>
+                                    <div class="d-flex justify-content-center position-relative">
+                                        <img src="./images/profile_picture6.png" alt="profile picture">
+                                        <div class="number1">
+                                            <span>6</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile_name">
+                                    <h5>mr fox</h5>
+                                </div>
+                                <div class="profile_info">
+                                    <p><span>Total Sales:</span>34.53 ETH</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-12 prof">
+                        <a class="profile_page" href="ArtistPage.html">
+                            <div class="profiles mt-5">
+                                <div class="d-flex justify-content-center">
+                                    <div class="number">
+                                        <span>7</span>
+                                    </div>
+                                    <div class="d-flex justify-content-center position-relative">
+                                        <img src="./images/profile_picture7.png" alt="profile picture">
+                                        <div class="number1">
+                                            <span>7</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile_name">
+                                    <h5>Shroomie</h5>
+                                </div>
+                                <div class="profile_info">
+                                    <p><span>Total Sales:</span>34.53 ETH</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-12 prof">
+                        <a class="profile_page" href="ArtistPage.html">
+                            <div class="profiles mt-5">
+                                <div class="d-flex justify-content-center">
+                                    <div class="number">
+                                        <span>8</span>
+                                    </div>
+                                    <div class="d-flex justify-content-center position-relative">
+                                        <img src="./images/profile_picture8.png" alt="profile picture">
+                                        <div class="number1">
+                                            <span>8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile_name">
+                                    <h5>robotica</h5>
+                                </div>
+                                <div class="profile_info">
+                                    <p><span>Total Sales:</span>34.53 ETH</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row mt-5 prof">
+                    <div class="col-md-3 col-sm-12">
+                        <a class="profile_page" href="ArtistPage.html">
+                            <div class="profiles">
+                                <div class="d-flex justify-content-center">
+                                    <div class="number">
+                                        <span>9</span>
+                                    </div>
+                                    <div class="d-flex justify-content-center position-relative">
+                                        <img src="./images/profile_picture9.png" alt="profile picture">
+                                        <div class="number1">
+                                            <span>9</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile_name">
+                                    <h5>RustyRobot</h5>
+                                </div>
+                                <div class="profile_info">
+                                    <p><span>Total Sales:</span>34.53 ETH</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        <a class="profile_page" href="ArtistPage.html">
+                            <div class="profiles">
+                                <div class="d-flex justify-content-center">
+                                    <div class="number">
+                                        <span>10</span>
+                                    </div>
+                                    <div class="d-flex justify-content-center position-relative">
+                                        <img src="./images/profile_picture10.png" alt="profile picture">
+                                        <div class="number1">
+                                            <span>10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile_name">
+                                    <h5>animakid</h5>
+                                </div>
+                                <div class="profile_info">
+                                    <p><span>Total Sales:</span>34.53 ETH</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        <a class="profile_page" href="ArtistPage.html">
+                            <div class="profiles">
+                                <div class="d-flex justify-content-center">
+                                    <div class="number">
+                                        <span>11</span>
+                                    </div>
+                                    <div class="d-flex justify-content-center position-relative">
+                                        <img src="./images/profile_picture11.png" alt="profile picture">
+                                        <div class="number1">
+                                            <span>11</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile_name">
+                                    <h5>Dotgu</h5>
+                                </div>
+                                <div class="profile_info">
+                                    <p><span>Total Sales:</span>34.53 ETH</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        <a class="profile_page" href="ArtistPage.html">
+                            <div class="profiles">
+                                <div class="d-flex justify-content-center">
+                                    <div class="number">
+                                        <span>12</span>
+                                    </div>
+                                    <div class="d-flex justify-content-center position-relative">
+                                        <img src="./images/profile_picture12.png" alt="profile picture">
+                                        <div class="number1">
+                                            <span>12</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile_name">
+                                    <h5>Ghiblier</h5>
+                                </div>
+                                <div class="profile_info">
+                                    <p><span>Total Sales:</span>34.53 ETH</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12 sec3_button1">
+                <button class=" d-flex justify-content-center align-items-center"><img style="margin-right: 12px;" src="./images/RocketLaunch.svg" alt="rocket">View Rankings</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section4 container-fluid">
+        <div class="container">
+
+            <div class="row">
+                <div class="sec4_title col-12">
+                    <h3>Browse Categories</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="category1">
+                        <div class="first_category"></div>
+                        <div class="front_image">
+                            <img src="./images/PaintBrush.png" alt="image of paintbrush">
+                       </div>
+                        <div class="description">
+                            <h5>art</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-6">
+                    <div class="category1">
+                        <div class="second_category"></div>
+                        <div class="front_image">
+                            <img src="./images/Swatches.png" alt="image of swatches">
+                        </div>
+                        <div class="description">
+                            <h5>colectibles</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-6">
+                    <div class="category1">
+                        <div class="third_category"></div>
+                        <div class="front_image">
+                            <img src="./images/MusicNotes.png" alt="image of musical note">
+                        </div>
+                        <div class="description">
+                            <h5>music</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-6">
+                    <div class="category1">
+                        <div class="fourth_category"></div>
+                        <div class="front_image">
+                            <img src="./images/Camera.png" alt="image of camera">
+                        </div>
+                        <div class="description">
+                            <h5>photography</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-6">
+                    <div class="category1">
+                        <div class="fifth_category"></div>
+                        <div class="front_image">
+                            <img src="./images/VideoCamera.png" alt="icon of video_camera">
+                        </div>
+                        <div class="description">
+                            <h5>video</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-6">
+                    <div class="category1">
+                        <div class="sixth_category"></div>
+                        <div class="front_image">
+                            <img src="./images/MagicWand.png" alt="image of key">
+                        </div>
+                        <div class="description">
+                            <h5>utility</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-6">
+                    <div class="category1">
+                        <div class="seventh_category"></div>
+                        <div class="front_image">
+                            <img src="./images/Basketball.png" alt="icon of ball">
+                        </div>
+                        <div class="description sports">
+                            <h5>sport</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-6">
+                    <div class="category1">
+                        <div class="eighth_category"></div>
+                        <div class="front_image">
+                            <img src="./images/Planet.png" alt="icon of planet">
+                        </div>
+                        <div class="description">
+                            <h5>virtual worlds</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section5 container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="sec5_header col-md-8 col-sm-12">
+                    <h3>Discover More NFTs</h3>
+                    <p>Explore new trending NFTs</p>
+                </div>
+                <div class="col-md-4 sec5_button">
+                    <button class="d-flex justify-content-center align-items-center"><img style="margin-right: 12px;" src="./images/Eye.svg" alt="icon of eye">See All</button>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-4 col-12">
+                    <div class="sec5_card">
+                        <div>
+                            <img style="width: 100%;" src="./images/spaceship.png" alt="image of space ship">
+                        </div>
+                        <div class="texts">
+                            <div>
+                                <h5>Distant Galaxy</h5>
+                                <p><img src="./images/prof_picture1.png" alt="profile picture of a girl">MoonDancer</p>
+                            </div>
+                            <div class="bidding">
+                                <div>
+                                    <span>Price</span>
+                                    <p>1.63 ETH</p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <span>Highest Bid</span>
+                                    <p>0.33 wETH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-12">
+                    <div class="sec5_card">
+                        <div>
+                            <img style="width: 100%;" src="./images/sky2.png" alt="image of sky">
+                        </div>
+                        <div class="texts">
+                            <div>
+                                <h5>Life On Edena</h5>
+                                <p><img src="./images/prof_picture2.png" alt="profile picture of a man">NebulaKid</p>
+                            </div>
+                            <div class="bidding">
+                                <div>
+                                    <span>Price</span>
+                                    <p>1.63 ETH</p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <span>Highest Bid</span>
+                                    <p>0.33 wETH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-12">
+                    <div class="sec5_card">
+                        <div>
+                            <img style="width: 100%;" src="./images/astronaut.png" alt="image of an astronaut">
+                        </div>
+                        <div class="texts">
+                            <div>
+                                <h5>AstroFiction</h5>
+                                <p><img src="./images/prof_picture3.png" alt="profile picture of a girl">Spaceone</p>
+                            </div>
+                            <div class="bidding">
+                                <div>
+                                    <span>Price</span>
+                                    <p>1.63 ETH</p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <span>Highest Bid</span>
+                                    <p>0.33 wETH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 sec5_button1">
+                    <button class="btn d-flex justify-content-center align-items-center"><img style="margin-right: 12px;" src="./images/Eye.svg" alt="icon of eye">See All</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section6 container-fluid">
+        <div class="container-fluid sec6_background">
+            <div class="container">
+                <div>
+                    <div class="row sec6_body">
+                        <div class="sec6_content">
+                            <div class="column col-md-8 col-12">
+                                <div class="button_like">
+                                    <img src="./images/profile_picture7.png" alt="profile picture of a man">
+                                    <span>Shroomie</span>
+                                </div>
+                                <h2>Magic Mashrooms</h2>
+                                <div class="nft_button">
+                                    <button class="btn btn-light"><img src="./images/Eye.svg" alt="icon of eye"> See NFT</button>
+                                </div>
+                            </div>
+                            <div class="timer col-md-4 col-12">
+                                <p>Auction ends in:</p>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <h3>59</h3>
+                                    <h4>:</h4>
+                                    <h3>59</h3>
+                                    <h4>:</h4>
+                                    <h3>59</h3>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <p style="width: 53px;">Hours</p>
+                                    <p>Minutes</p>
+                                    <p>Seconds</p>
+                                </div>
+                            </div>
+                            <div class="nft_button2">
+                                <button class="btn btn-light"><img src="./images/Eye.svg" alt="icon of eye"> See NFT</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section7 container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="sec7_header col-12">
+                    <h3>How it works</h3>
+                    <p>Find out how to get started</p>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-4 col-12">
+                    <div class="card1">
+                        <div>
+                            <img src="./images/files.png" alt="icon of files">
+                        </div>
+                        <div>
+                            <h5>Setup Your wallet</h5>
+                            <p>Set up your wallet of choice. Connect it to the Animarket by clicking the wallet icon in the top right corner.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-12">
+                    <div class="card1" style="padding-bottom: 52px;">
+                        <div>
+                            <img src="./images/music_files.png" alt="icon of music files">
+                        </div>
+                        <div>
+                            <h5>Create Collection</h5>
+                            <p>Upload your work and setup your collection. Add a description, social links and floor price.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-12">
+                    <div class="card1">
+                        <div>
+                            <img src="./images/market_icon.png" alt="icon of shopping cart">
+                        </div>
+                        <div>
+                            <h5>Start Earning</h5>
+                            <p>Choose between auctions and fixed-price listings. Start earning by selling your NFTs or trading others.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section8 container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sec8_body">
+                        <div>
+                            <img class="astro" src="./images/astronaut_reading.png" alt="astronaut reading a newspaper">
+                        </div>
+                        <div style="width: 425px;">
+                            <h3>Join our weekly digest</h3>
+                            <p>Get exclusive promotions & updates straight to your inbox.</p>
+                            <div class="input_div">
+                                <input type="email" placeholder="Enter your email here">
+                                <button style="display: flex;justify-self: center;"><div><img src="./images/EnvelopeSimple.png" alt="icon of envelope">Subscribe</div></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="footer_body col-md-4 col-12">
+                    <div class="d-flex">
+                        <img src="./images/Storefront.png" alt="storefront">
+                        <a href="index.html"><h5 class="mt-2">NFT Marketplace</h5></a>
+                    </div>
+                    <a href="#" style="width: 238px;">NFT marketplace UI created with Anima for Figma.</a>
+                    <a href="#">Join our community</a>
+                    <div>
+                        <a href="#"><img src="./images/DiscordLogo.svg" alt="discord logo"></a>
+                        <a href="#"><img src="./images/YoutubeLogo.svg" alt="youtube logo"></a>
+                        <a href="#"><img src="./images/TwitterLogo.svg" alt="twitter logo"></a>
+                        <a href="#"><img src="./images/InstagramLogo.svg" alt="instagram logo"></a>
+                    </div>
+                </div>
+
+                <div class="footer_body col-md-3 col-12">
+                    <a href="#">Explore</a>
+                    <a href="#">Marketplace</a>
+                    <a href="#">Rankings</a>
+                    <a href="wallet.html">Connect a wallet</a>
+                </div>
+
+                <div class="footer_body col-md-5 col-12">
+                    <a href="#">Join our weekly digest</a>
+                    <a href="#" class="footer_boy"  style="width: 330px;">Get exclusive promotions & updates straight to your inbox.</a>
+                    <div class="footer_button">
+                        <input type="email" placeholder="Enter your email here">
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer_line">
+            <div>
+                <p class="ending">Ⓒ NFT Market. Use this template freely.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

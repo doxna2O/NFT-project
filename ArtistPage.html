@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Marketplace</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header class="container mt-3">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container" style="padding:0px;">
+                <a href="index.html">
+                    <span class="navbar-brand"><img src="./images/Storefront.png" alt="company logo"> NFT Marketplace</span>
+                </a>
+                
+                <button style="border: none !important;" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#myNav">
+                    <img src="./images/Burger Menu.svg" alt="burger menu">
+                </button>
+
+                <div class="collapse navbar-collapse" id="myNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="navbar-nav-item">
+                            <a href="marketplace.html">Marketplace</a>
+                        </li>
+                        <li class="navbar-nav-item">
+                            <a href="rankings.html">Rankings</a>
+                        </li>
+                        <li class="navbar-nav-item">
+                            <a href="wallet.html">Connect a wallet</a>
+                        </li>
+                        <li class="navbar-nav-item">
+                            <a href="account.html"> 
+                                <button style="color:white;" class="nav_button">
+                                    Sign up
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="profile_section">
+        <div class="d-flex justify-content-center mt-3 position-relative">
+            <img class="w-100 front_mobile" src="./images/ProfilePagePic.png" alt="image of sky">
+            <img class="background_mobile" src="./images/ProfilePagePicMobile.png" alt="image of sky">
+            <div class="profile_image position-absolute">
+                <img src="./images/ProfilePicture.png" alt="profile picture">
+            </div>
+        </div>
+        <div class="container animakid">
+            <div class="row d-flex">
+                <div class="profile_description col-md-6 col-sm-12">
+                    <h1>Animakid</h1>
+                    <div class="NFT_buttons1" style="margin-left: auto;">
+                        <button class="NFT_button"><img class="icons" src="./images/Copy.svg" alt="copy"> 0xc0E3...B79C</button>
+                        <button class="NFT_button1"><img class="icons" src="./images/Plus.png" alt="Plus symbol"> Follow</button>
+                    </div>
+                    <div class="achievements d-flex justify-content-between">
+                        <div>
+                            <h4>250k+</h4>
+                            <span>Volume</span>
+                        </div>
+                        <div>
+                            <h4>50+</h4>
+                            <span>NFTs Sold</span>
+                        </div>
+                        <div>
+                            <h4>3000+</h4>
+                            <span>Followers</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h5>Bio</h5>
+                        <p>The internet's friendliest designer kid.</p>
+                    </div>
+                    <div>
+                        <h5>Links</h5>
+                        <div class="d-flex" style="gap: 12px; margin-top: 10px;">
+                            <img src="./images/Globe.svg" alt="globe">
+                            <img src="./images/DiscordLogo.svg" alt="discord icon">
+                            <img src="./images/YoutubeLogo.svg" alt="youtube icon">
+                            <img src="./images/TwitterLogo.svg" alt="twitter icon">
+                            <img src="./images/InstagramLogo.svg" alt="instagram icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex col-md-6 col-sm-12">
+                    <div class="NFT_buttons" style="margin-left: auto;">
+                        <button class="NFT_button"><img src="./images/Copy.svg" alt="copy"> 0xc0E3...B79C</button>
+                        <button class="NFT_button1"><img class="icons" src="./images/Plus.png" alt="Plus symbol"> Follow</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="divider_line">
+        <div class="container d-flex">
+            <div class="row owned w-100">
+                <div class="col-4 d-flex align-items-center justify-content-center" style="gap: 16px; padding-bottom: 14px;">
+                    <h5>Created</h5>
+                    <div class="personal_info">
+                        <span>302</span>
+                    </div>
+                </div>
+                
+                <div class="col-4 d-flex align-items-center justify-content-center" style="gap: 16px; padding-bottom: 14px;">
+                    <h5>Owned</h5>
+                    <div class="personal_info">
+                        <span>67</span>
+                    </div>
+                </div>
+
+                <div class="col-4 d-flex align-items-center justify-content-center" style="gap: 16px; padding-bottom: 14px;">
+                    <h5>Collection</h5>
+                    <div class="personal_info">
+                        <span>4</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="profile_section2 container-fluid">
+        <div class="container">
+            <div class="row profile_cards">
+                <div class="col-md-4 col-12">
+                    <div class="sec5_cards">
+                        <div>
+                            <img style="width: 100%;" src="./images/spaceship.png" alt="image of space ship">
+                        </div>
+                        <div class="texts">
+                            <div>
+                                <h5>Distant Galaxy</h5>
+                                <p><img src="./images/Animakid.png" alt="profile picture of a girl">Animakid</p>
+                            </div>
+                            <div class="bidding">
+                                <div>
+                                    <span>Price</span>
+                                    <p>1.63 ETH</p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <span>Highest Bid</span>
+                                    <p>0.33 wETH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-12">
+                    <div class="sec5_cards">
+                        <div>
+                            <img style="width: 100%;" src="./images/sky2.png" alt="image of sky">
+                        </div>
+                        <div class="texts">
+                            <div>
+                                <h5>Life On Edena</h5>
+                                <p><img src="./images/Animakid.png" alt="profile picture of a man">Animakid</p>
+                            </div>
+                            <div class="bidding">
+                                <div>
+                                    <span>Price</span>
+                                    <p>1.63 ETH</p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <span>Highest Bid</span>
+                                    <p>0.33 wETH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-12">
+                    <div class="sec5_cards">
+                        <div>
+                            <img style="width: 100%;" src="./images/astronaut.png" alt="image of an astronaut">
+                        </div>
+                        <div class="texts">
+                            <div>
+                                <h5>AstroFiction</h5>
+                                <p><img src="./images/Animakid.png" alt="profile picture of a girl">Animakid</p>
+                            </div>
+                            <div class="bidding">
+                                <div>
+                                    <span>Price</span>
+                                    <p>1.63 ETH</p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <span>Highest Bid</span>
+                                    <p>0.33 wETH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-12 extra_cards">
+                    <div class="sec5_cards">
+                        <div>
+                            <img style="width: 100%;" src="./images/CryptoCity.png" alt="image of a space city">
+                        </div>
+                        <div class="texts">
+                            <div>
+                                <h5>CryptoCity</h5>
+                                <p><img src="./images/Animakid.png" alt="profile picture of a girl">Animakid</p>
+                            </div>
+                            <div class="bidding">
+                                <div>
+                                    <span>Price</span>
+                                    <p>1.63 ETH</p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <span>Highest Bid</span>
+                                    <p>0.33 wETH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-12 extra_cards">
+                    <div class="sec5_cards">
+                        <div>
+                            <img style="width: 100%;" src="./images/ColorfulDog.png" alt="image of a colorful dog">
+                        </div>
+                        <div class="texts">
+                            <div>
+                                <h5>ColorfulDog 0524</h5>
+                                <p><img src="./images/Animakid.png" alt="profile picture of a girl">Animakid</p>
+                            </div>
+                            <div class="bidding">
+                                <div>
+                                    <span>Price</span>
+                                    <p>1.63 ETH</p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <span>Highest Bid</span>
+                                    <p>0.33 wETH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-12 extra_cards">
+                    <div class="sec5_cards">
+                        <div>
+                            <img style="width: 100%;" src="./images/Space.png" alt="image of a space">
+                        </div>
+                        <div class="texts">
+                            <div>
+                                <h5>Space Tales</h5>
+                                <p><img src="./images/Animakid.png" alt="profile picture of a girl">Animakid</p>
+                            </div>
+                            <div class="bidding">
+                                <div>
+                                    <span>Price</span>
+                                    <p>1.63 ETH</p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <span>Highest Bid</span>
+                                    <p>0.33 wETH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-12 extra_cards">
+                    <div class="sec5_cards">
+                        <div>
+                            <img style="width: 100%;" src="./images/CherryBlossom.png" alt="image of a girl and a cherry blossom">
+                        </div>
+                        <div class="texts">
+                            <div>
+                                <h5>Cherry Blossom Girl 037</h5>
+                                <p><img src="./images/Animakid.png" alt="profile picture of a girl">Animakid</p>
+                            </div>
+                            <div class="bidding">
+                                <div>
+                                    <span>Price</span>
+                                    <p>1.63 ETH</p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <span>Highest Bid</span>
+                                    <p>0.33 wETH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-12 extra_cards">
+                    <div class="sec5_cards">
+                        <div>
+                            <img style="width: 100%;" src="./images/Robota.png" alt="image of a robot">
+                        </div>
+                        <div class="texts">
+                            <div>
+                                <h5>Dancing Robots 0987</h5>
+                                <p><img src="./images/Animakid.png" alt="profile picture of a girl">Animakid</p>
+                            </div>
+                            <div class="bidding">
+                                <div>
+                                    <span>Price</span>
+                                    <p>1.63 ETH</p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <span>Highest Bid</span>
+                                    <p>0.33 wETH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-12 extra_cards">
+                    <div class="sec5_cards">
+                        <div>
+                            <img style="width: 100%;" src="./images/ape.png" alt="image of a monkey">
+                        </div>
+                        <div class="texts">
+                            <div>
+                                <h5>IceCream Ape</h5>
+                                <p><img src="./images/Animakid.png" alt="profile picture of a girl">Animakid</p>
+                            </div>
+                            <div class="bidding">
+                                <div>
+                                    <span>Price</span>
+                                    <p>1.63 ETH</p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <span>Highest Bid</span>
+                                    <p>0.33 wETH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <hr class="footer_divider">
+
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="footer_body col-md-4 col-12">
+                    <div class="d-flex">
+                        <img src="./images/Storefront.png" alt="storefront">
+                        <a href="index.html"><h5 class="mt-2">NFT Marketplace</h5></a>
+                    </div>
+                    <a href="#" style="width: 238px;">NFT marketplace UI created with Anima for Figma.</a>
+                    <a href="#">Join our community</a>
+                    <div>
+                        <a href="#"><img src="./images/DiscordLogo.svg" alt="discord logo"></a>
+                        <a href="#"><img src="./images/YoutubeLogo.svg" alt="youtube logo"></a>
+                        <a href="#"><img src="./images/TwitterLogo.svg" alt="twitter logo"></a>
+                        <a href="#"><img src="./images/InstagramLogo.svg" alt="instagram logo"></a>
+                    </div>
+                </div>
+
+                <div class="footer_body col-md-3 col-12">
+                    <a href="#">Explore</a>
+                    <a href="#">Marketplace</a>
+                    <a href="#">Rankings</a>
+                    <a href="wallet.html">Connect a wallet</a>
+                </div>
+
+                <div class="footer_body col-md-5 col-12">
+                    <a href="#">Join our weekly digest</a>
+                    <a href="#" class="footer_boy"  style="width: 330px;">Get exclusive promotions & updates straight to your inbox.</a>
+                    <div class="footer_button">
+                        <input type="email" placeholder="Enter your email here">
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer_line">
+            <div>
+                <p class="ending">Ⓒ NFT Market. Use this template freely.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Marketplace</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header class="container mt-3">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container" style="padding:0px;">
+                <a href="index.html">
+                    <span class="navbar-brand"><img src="./images/Storefront.png" alt="company logo"> NFT Marketplace</span>
+                </a>
+                
+                <button style="border: none !important;" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#myNav">
+                    <img src="./images/Burger Menu.svg" alt="burger menu">
+                </button>
+
+                <div class="collapse navbar-collapse" id="myNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="navbar-nav-item">
+                            <a href="marketplace.html">Marketplace</a>
+                        </li>
+                        <li class="navbar-nav-item">
+                            <a href="rankings.html">Rankings</a>
+                        </li>
+                        <li class="navbar-nav-item">
+                            <a href="wallet.html">Connect a wallet</a>
+                        </li>
+                        <li class="navbar-nav-item">
+                            <a href="account.html"> 
+                                <button style="color:white;" class="nav_button">
+                                    Sign up
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container-fluid ranking_section1">
+        <div class="container">
+            <div class="row">
+                <div class="sec3_header col-md-8 col-sm-12">
+                    <h3>Top creators</h3>
+                    <p>Checkout Top Rated Creators on the NFT Marketplace</p>
+                </div>
+            </div>
+    </section>
+
+    <section class="container-fluid ranking_section2">
+        <div class="container">
+            <div class="row owned">
+                <div class="day col-3 d-flex align-items-center justify-content-center" style="padding-bottom: 14px;">
+                    <h5 class="long">Today</h5>
+                    <h5 class="short">1d</h5>
+                </div>
+                
+                <div class="day col-3 d-flex align-items-center justify-content-center" style="padding-bottom: 14px;">
+                    <h5 class="long">This Week</h5>
+                    <h5 class="short">7d</h5>
+                </div>
+
+                <div class="day col-3 d-flex align-items-center justify-content-center" style="padding-bottom: 14px;">
+                    <h5 class="long">This Month</h5>
+                    <h5 class="short">30d</h5>
+                </div>
+                
+                <div class="day col-3 d-flex align-items-center justify-content-center" style="padding-bottom: 14px;">
+                    <h5>All Time</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid ranking_section3">
+        <div class="container">
+            <div class="row stats">
+                <div class="d-flex align-items-center col-md-6 col-8" style="gap: 20px;">
+                    <span>#</span>
+                    <span>Artist</span>
+                </div>
+                <span class="d-none d-md-inline col-md-2">Change</span>
+                <span class="d-none d-md-inline col-md-2">NFTs Sold</span>
+                <div class="col-md-2 col-4">
+                    <span>Volume</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+           <div class="row ranking_profiles align-items-center">
+            <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                    <span>1</span>
+                </div>
+                <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture1.png" alt="profile picture of a girl">
+                <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture13.png" alt="profile picture of a boy">
+                <h5 class="d-none d-md-inline">Jaydon Ekstrom Bothman</h5>
+                <h5 class="d-md-none d-sm-inline">Zain Dokidis</h5>
+            </div>
+            <div class="col-md-2 change d-none d-md-inline">
+                <p>+1.41%</p>
+            </div>
+            <div class="nfts col-md-2 d-none d-md-inline">
+                <p>602</p>
+            </div>
+            <div class="nfts col-4 col-md-2">
+                <p>12.4 ETH</p>
+            </div>
+           </div>
+        </div>
+
+        <div class="container mt-4">
+            <div class="row ranking_profiles align-items-center">
+             <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                 <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                     <span>2</span>
+                 </div>
+                 <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture2.png" alt="profile picture of a man">
+                 <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture10.png" alt="profile picture of a girl">
+                 <h5 class="d-none d-md-inline">Ruben Carder</h5>
+                 <h5 class="d-md-none d-sm-inline">Zain Dokidis</h5>
+             </div>
+             <div class="col-md-2 change d-none d-md-inline">
+                 <p>+1.41%</p>
+             </div>
+             <div class="nfts col-md-2 d-none d-md-inline">
+                 <p>602</p>
+             </div>
+             <div class="nfts col-4 col-md-2">
+                 <p>12.4 ETH</p>
+             </div>
+            </div>
+         </div>
+
+         <div class="container mt-4">
+            <div class="row ranking_profiles align-items-center">
+             <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                 <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                     <span>3</span>
+                 </div>
+                 <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture3.png" alt="profile picture of a girl">
+                 <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture7.png" alt="profile picture of a boy">
+                 <h5 class="d-none d-md-inline">Alfredo Septimus</h5>
+                 <h5 class="d-md-none d-sm-inline">Zain Dokidis</h5>
+             </div>
+             <div class="col-md-2 change d-none d-md-inline">
+                 <p>+1.41%</p>
+             </div>
+             <div class="nfts col-md-2 d-none d-md-inline">
+                 <p>602</p>
+             </div>
+             <div class="nfts col-4 col-md-2">
+                 <p>12.4 ETH</p>
+             </div>
+            </div>
+         </div>
+
+         <div class="container mt-4">
+            <div class="row ranking_profiles align-items-center">
+             <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                 <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                     <span>4</span>
+                 </div>
+                 <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture4.png" alt="profile picture of a girl">
+                 <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture7.png" alt="profile picture of a boy">
+                 <h5 class="d-none d-md-inline">Davis Franci</h5>
+                 <h5 class="d-md-none d-sm-inline">Emerson Carder</h5>
+             </div>
+             <div class="col-md-2 change d-none d-md-inline">
+                 <p>+1.41%</p>
+             </div>
+             <div class="nfts col-md-2 d-none d-md-inline">
+                 <p>602</p>
+             </div>
+             <div class="nfts col-4 col-md-2">
+                 <p>12.4 ETH</p>
+             </div>
+            </div>
+         </div>
+
+         <div class="container mt-4">
+            <div class="row ranking_profiles align-items-center">
+             <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                 <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                     <span>5</span>
+                 </div>
+                 <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture5.png" alt="profile picture of a girl">
+                 <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture3.png" alt="profile picture of a boy">
+                 <h5 class="d-none d-md-inline">Livia Rosser</h5>
+                 <h5 class="d-md-none d-sm-inline">Zain Botosh</h5>
+             </div>
+             <div class="col-md-2 change d-none d-md-inline">
+                 <p>+1.41%</p>
+             </div>
+             <div class="nfts col-md-2 d-none d-md-inline">
+                 <p>602</p>
+             </div>
+             <div class="nfts col-4 col-md-2">
+                 <p>12.4 ETH</p>
+             </div>
+            </div>
+         </div>
+
+         <div class="container mt-4">
+            <div class="row ranking_profiles align-items-center">
+             <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                 <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                     <span>6</span>
+                 </div>
+                 <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture6.png" alt="profile picture of a fox">
+                 <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture5.png" alt="profile picture of a boy">
+                 <h5 class="d-none d-md-inline">Kianna Donin</h5>
+                 <h5 class="d-md-none d-sm-inline">Talan Korsgaard</h5>
+             </div>
+             <div class="col-md-2 change d-none d-md-inline">
+                 <p>+1.41%</p>
+             </div>
+             <div class="nfts col-md-2 d-none d-md-inline">
+                 <p>602</p>
+             </div>
+             <div class="nfts col-4 col-md-2">
+                 <p>12.4 ETH</p>
+             </div>
+            </div>
+         </div>
+
+         <div class="container mt-4">
+            <div class="row ranking_profiles align-items-center">
+             <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                 <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                     <span>7</span>
+                 </div>
+                 <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture7.png" alt="profile picture of a boy">
+                 <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture8.png" alt="profile picture of a robot">
+                 <h5 class="d-none d-md-inline">Phillip Lipshutz</h5>
+                 <h5 class="d-md-none d-sm-inline">Haylie Dias</h5>
+             </div>
+             <div class="col-md-2 change d-none d-md-inline">
+                 <p>+1.41%</p>
+             </div>
+             <div class="nfts col-md-2 d-none d-md-inline">
+                 <p>602</p>
+             </div>
+             <div class="nfts col-4 col-md-2">
+                 <p>12.4 ETH</p>
+             </div>
+            </div>
+         </div>
+
+         <div class="container mt-4">
+            <div class="row ranking_profiles align-items-center">
+             <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                 <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                     <span>8</span>
+                 </div>
+                 <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture8.png" alt="profile picture of a robot">
+                 <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture8.png" alt="profile picture of a robot">
+                 <h5 class="d-none d-md-inline">Maria Rosser</h5>
+                 <h5 class="d-md-none d-sm-inline">James Donin</h5>
+             </div>
+             <div class="col-md-2 change d-none d-md-inline">
+                 <p>+1.41%</p>
+             </div>
+             <div class="nfts col-md-2 d-none d-md-inline">
+                 <p>602</p>
+             </div>
+             <div class="nfts col-4 col-md-2">
+                 <p>12.4 ETH</p>
+             </div>
+            </div>
+         </div>
+
+         <div class="container mt-4">
+            <div class="row ranking_profiles align-items-center">
+             <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                 <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                     <span>9</span>
+                 </div>
+                 <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture9.png" alt="profile picture of a robot">
+                 <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture3.png" alt="profile picture of a girl">
+                 <h5 class="d-none d-md-inline">Kianna Stanton</h5>
+                 <h5 class="d-md-none d-sm-inline">Erin Siphron</h5>
+             </div>
+             <div class="col-md-2 change d-none d-md-inline">
+                 <p>+1.41%</p>
+             </div>
+             <div class="nfts col-md-2 d-none d-md-inline">
+                 <p>602</p>
+             </div>
+             <div class="nfts col-4 col-md-2">
+                 <p>12.4 ETH</p>
+             </div>
+            </div>
+         </div>
+
+         <div class="container mt-4">
+            <div class="row ranking_profiles align-items-center">
+             <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                 <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                     <span>10</span>
+                 </div>
+                 <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture13.png" alt="profile picture of a boy">
+                 <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture8.png" alt="profile picture of a robot">
+                 <h5 class="d-none d-md-inline">Angel Lubin</h5>
+                 <h5 class="d-md-none d-sm-inline">Cristofer Levin</h5>
+             </div>
+             <div class="col-md-2 change d-none d-md-inline">
+                 <p>+1.41%</p>
+             </div>
+             <div class="nfts col-md-2 d-none d-md-inline">
+                 <p>602</p>
+             </div>
+             <div class="nfts col-4 col-md-2">
+                 <p>12.4 ETH</p>
+             </div>
+            </div>
+         </div>
+
+         <div class="container mt-4">
+            <div class="row ranking_profiles align-items-center">
+             <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                 <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                     <span>11</span>
+                 </div>
+                 <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture14.png" alt="profile picture of a robot">
+                 <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture4.png" alt="profile picture of a girl">
+                 <h5 class="d-none d-md-inline">Allison Torff</h5>
+                 <h5 class="d-md-none d-sm-inline">Alena Schleifer</h5>
+             </div>
+             <div class="col-md-2 change d-none d-md-inline">
+                 <p>+1.41%</p>
+             </div>
+             <div class="nfts col-md-2 d-none d-md-inline">
+                 <p>602</p>
+             </div>
+             <div class="nfts col-4 col-md-2">
+                 <p>12.4 ETH</p>
+             </div>
+            </div>
+         </div>
+
+         <div class="container mt-4">
+            <div class="row ranking_profiles align-items-center">
+             <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                 <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                     <span>12</span>
+                 </div>
+                 <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture15.png" alt="profile picture of a robot">
+                 <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture1.png" alt="profile picture of a girl">
+                 <h5 class="d-none d-md-inline">Davis Workman</h5>
+                 <h5 class="d-md-none d-sm-inline">Dulce Vetrovs</h5>
+             </div>
+             <div class="col-md-2 change d-none d-md-inline">
+                 <p>+1.41%</p>
+             </div>
+             <div class="nfts col-md-2 d-none d-md-inline">
+                 <p>602</p>
+             </div>
+             <div class="nfts col-4 col-md-2">
+                 <p>12.4 ETH</p>
+             </div>
+            </div>
+         </div>
+
+         <div class="container mt-4">
+            <div class="row ranking_profiles align-items-center">
+             <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                 <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                     <span>13</span>
+                 </div>
+                 <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture16.png" alt="profile picture of a dog">
+                 <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture13.png" alt="profile picture of a boy">
+                 <h5 class="d-none d-md-inline">Lindsey Lipshutz</h5>
+                 <h5 class="d-md-none d-sm-inline">Nolan Siphron</h5>
+             </div>
+             <div class="col-md-2 change d-none d-md-inline">
+                 <p>+1.41%</p>
+             </div>
+             <div class="nfts col-md-2 d-none d-md-inline">
+                 <p>602</p>
+             </div>
+             <div class="nfts col-4 col-md-2">
+                 <p>12.4 ETH</p>
+             </div>
+            </div>
+         </div>
+
+         <div class="container mt-4">
+            <div class="row ranking_profiles align-items-center">
+             <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                 <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                     <span>14</span>
+                 </div>
+                 <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture10.png" alt="profile picture of a girl">
+                 <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture4.png" alt="profile picture of a girl">
+                 <h5 class="d-none d-md-inline">Randy Carder</h5>
+                 <h5 class="d-md-none d-sm-inline">Omar Stanton</h5>
+             </div>
+             <div class="col-md-2 change d-none d-md-inline">
+                 <p>+1.41%</p>
+             </div>
+             <div class="nfts col-md-2 d-none d-md-inline">
+                 <p>602</p>
+             </div>
+             <div class="nfts col-4 col-md-2">
+                 <p>12.4 ETH</p>
+             </div>
+            </div>
+         </div>
+
+         <div class="container mt-4">
+            <div class="row ranking_profiles align-items-center">
+             <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                 <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                     <span>15</span>
+                 </div>
+                 <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture11.png" alt="profile picture of a girl">
+                 <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture8.png" alt="profile picture of a robot">
+                 <h5 class="d-none d-md-inline">Lydia Culhane</h5>
+                 <h5 class="d-md-none d-sm-inline">Omar Lipshutz</h5>
+             </div>
+             <div class="col-md-2 change d-none d-md-inline">
+                 <p>+1.41%</p>
+             </div>
+             <div class="nfts col-md-2 d-none d-md-inline">
+                 <p>602</p>
+             </div>
+             <div class="nfts col-4 col-md-2">
+                 <p>12.4 ETH</p>
+             </div>
+            </div>
+         </div>
+
+         <div class="container mt-4">
+            <div class="row ranking_profiles align-items-center">
+             <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                 <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                     <span>16</span>
+                 </div>
+                 <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture17.png" alt="profile picture of a girl">
+                 <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture13.png" alt="profile picture of a boy">
+                 <h5 class="d-none d-md-inline">Rayna Bator</h5>
+                 <h5 class="d-md-none d-sm-inline">Terry Donin</h5>
+             </div>
+             <div class="col-md-2 change d-none d-md-inline">
+                 <p>+1.41%</p>
+             </div>
+             <div class="nfts col-md-2 d-none d-md-inline">
+                 <p>602</p>
+             </div>
+             <div class="nfts col-4 col-md-2">
+                 <p>12.4 ETH</p>
+             </div>
+            </div>
+         </div>
+
+         <div class="container mt-4">
+            <div class="row ranking_profiles align-items-center">
+             <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                 <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                     <span>17</span>
+                 </div>
+                 <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture12.png" alt="profile picture of a man">
+                 <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture6.png" alt="profile picture of a fox">
+                 <h5 class="d-none d-md-inline">Jocelyn Westervelt</h5>
+                 <h5 class="d-md-none d-sm-inline">Erin Botosh</h5>
+             </div>
+             <div class="col-md-2 change d-none d-md-inline">
+                 <p>+1.41%</p>
+             </div>
+             <div class="nfts col-md-2 d-none d-md-inline">
+                 <p>602</p>
+             </div>
+             <div class="nfts col-4 col-md-2">
+                 <p>12.4 ETH</p>
+             </div>
+            </div>
+         </div>
+
+         <div class="container mt-4">
+            <div class="row ranking_profiles align-items-center">
+             <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                 <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                     <span>18</span>
+                 </div>
+                 <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture1.png" alt="profile picture of a girl">
+                 <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture10.png" alt="profile picture of a girl">
+                 <h5 class="d-none d-md-inline">Marilyn Torff</h5>
+                 <h5 class="d-md-none d-sm-inline">Cheyenne Rhiel</h5>
+             </div>
+             <div class="col-md-2 change d-none d-md-inline">
+                 <p>+1.41%</p>
+             </div>
+             <div class="nfts col-md-2 d-none d-md-inline">
+                 <p>602</p>
+             </div>
+             <div class="nfts col-4 col-md-2">
+                 <p>12.4 ETH</p>
+             </div>
+            </div>
+         </div>
+
+         <div class="container mt-4">
+            <div class="row ranking_profiles align-items-center">
+             <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                 <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                     <span>19</span>
+                 </div>
+                 <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture13.png" alt="profile picture of a boy">
+                 <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture9.png" alt="profile picture of a robot">
+                 <h5 class="d-none d-md-inline">Skylar Levin</h5>
+                 <h5 class="d-md-none d-sm-inline">Jaxson Vaccaro</h5>
+             </div>
+             <div class="col-md-2 change d-none d-md-inline">
+                 <p>+1.41%</p>
+             </div>
+             <div class="nfts col-md-2 d-none d-md-inline">
+                 <p>602</p>
+             </div>
+             <div class="nfts col-4 col-md-2">
+                 <p>12.4 ETH</p>
+             </div>
+            </div>
+         </div>
+
+         <div class="container mt-4">
+            <div class="row ranking_profiles align-items-center">
+             <div class="ranking_number col-8 col-md-6 d-flex align-items-center" style="gap: 20px;">
+                 <div class="rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; background: #2B2B2B;">
+                     <span>20</span>
+                 </div>
+                 <img class="ranking_pic d-none d-md-inline" src="./images/profile_picture3.png" alt="profile picture of a girl">
+                 <img class="ranking_pic d-md-none d-sm-inline" src="./images/profile_picture9.png" alt="profile picture of a robot">
+                 <h5 class="d-none d-md-inline">Terry Dorwart</h5>
+                 <h5 class="d-md-none d-sm-inline">Jordyn Dias</h5>
+             </div>
+             <div class="col-md-2 change d-none d-md-inline">
+                 <p>+1.41%</p>
+             </div>
+             <div class="nfts col-md-2 d-none d-md-inline">
+                 <p>602</p>
+             </div>
+             <div class="nfts col-4 col-md-2">
+                 <p>12.4 ETH</p>
+             </div>
+            </div>
+         </div>
+    </section>
+
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="footer_body col-md-4 col-12">
+                    <div class="d-flex">
+                        <img src="./images/Storefront.png" alt="storefront">
+                        <a href="index.html"><h5 class="mt-2">NFT Marketplace</h5></a>
+                    </div>
+                    <a href="#" style="width: 238px;">NFT marketplace UI created with Anima for Figma.</a>
+                    <a href="#">Join our community</a>
+                    <div>
+                        <a href="#"><img src="./images/DiscordLogo.svg" alt="discord logo"></a>
+                        <a href="#"><img src="./images/YoutubeLogo.svg" alt="youtube logo"></a>
+                        <a href="#"><img src="./images/TwitterLogo.svg" alt="twitter logo"></a>
+                        <a href="#"><img src="./images/InstagramLogo.svg" alt="instagram logo"></a>
+                    </div>
+                </div>
+
+                <div class="footer_body col-md-3 col-12">
+                    <a href="#">Explore</a>
+                    <a href="#">Marketplace</a>
+                    <a href="#">Rankings</a>
+                    <a href="wallet.html">Connect a wallet</a>
+                </div>
+
+                <div class="footer_body col-md-5 col-12">
+                    <a href="#">Join our weekly digest</a>
+                    <a href="#" class="footer_boy"  style="width: 330px;">Get exclusive promotions & updates straight to your inbox.</a>
+                    <div class="footer_button">
+                        <input type="email" placeholder="Enter your email here">
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer_line">
+            <div>
+                <p class="ending">Ⓒ NFT Market. Use this template freely.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
