@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'Work Sans';
-    src: url(./fonts/WorkSans-VariableFont_wght.ttf);
+    src: url(../fonts/WorkSans-VariableFont_wght.ttf);
 }
 @font-face {
     font-family: 'Space Mono';
-    src: url(./fonts/SpaceMono-Bold.ttf);
+    src: url(../fonts/SpaceMono-Bold.ttf);
 }
 
 *{
@@ -251,7 +251,7 @@ body{
         margin-top: 40px;
     }
     .section6{
-        background-image: url(./images/mobile_background.png) !important;
+        background-image: url(../images/mobile_background.png) !important;
     }
     .sec6_body{
         display: flex;
@@ -990,56 +990,56 @@ header nav{
 }
 .first_category{
     height: 240px;
-    background-image: url(./images/whales.png);
+    background-image: url(../images/whales.png);
     background-repeat: no-repeat;
     background-size: cover;
     filter: blur(7.5px);
 }
 .second_category{
     height: 240px;
-    background-image: url(./images/monkey.png);
+    background-image: url(../images/monkey.png);
     background-repeat: no-repeat;
     background-size: cover;
     filter: blur(7.5px);
 }
 .third_category{
     height: 240px;
-    background-image: url(./images/guitar.png);
+    background-image: url(../images/guitar.png);
     background-repeat: no-repeat;
     background-size: cover;
     filter: blur(7.5px);
 }
 .fourth_category{
     height: 240px;
-    background-image: url(./images/old_man.png);
+    background-image: url(../images/old_man.png);
     background-repeat: no-repeat;
     background-size: cover;
     filter: blur(7.5px);
 }
 .fifth_category{
     height: 240px;
-    background-image: url(./images/sky.png);
+    background-image: url(../images/sky.png);
     background-repeat: no-repeat;
     background-size: cover;
     filter: blur(7.5px);
 }
 .sixth_category{
     height: 240px;
-    background-image: url(./images/key.png);
+    background-image: url(../images/key.png);
     background-repeat: no-repeat;
     background-size: cover;
     filter: blur(7.5px);
 }
 .seventh_category{
     height: 240px;
-    background-image: url(./images/ball.png);
+    background-image: url(../images/ball.png);
     background-repeat: no-repeat;
     background-size: cover;
     filter: blur(7.5px);
 }
 .eighth_category{
     height: 240px;
-    background-image: url(./images/space_city.png);
+    background-image: url(../images/space_city.png);
     background-repeat: no-repeat;
     background-size: cover;
     filter: blur(7.5px);
@@ -1189,7 +1189,7 @@ header nav{
 .section6{
     margin-top: 80px;
     margin-bottom: 80px;
-    background-image: url(./images/big_mushroom.jpg);
+    background-image: url(../images/big_mushroom.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding: 0px;
@@ -1557,19 +1557,19 @@ footer{
 }
 
 .input1{
-    background-image: url(./images/User_icon.svg) !important;
+    background-image: url(../images/User_icon.svg) !important;
     background-repeat: no-repeat !important;
     background-position-y: center !important;
     background-position-x: 20px !important;
 }
 .input2{
-    background-image: url(./images/EnvelopeSimple_icon.svg) !important;
+    background-image: url(../images/EnvelopeSimple_icon.svg) !important;
     background-repeat: no-repeat !important;
     background-position-y: center !important;
     background-position-x: 20px !important;
 }
 .input3{
-    background-image: url(./images/LockKey.svg) !important;
+    background-image: url(../images/LockKey.svg) !important;
     background-repeat: no-repeat !important;
     background-position-y: center !important;
     background-position-x: 20px !important;
@@ -2045,7 +2045,7 @@ footer{
     background-color: inherit;
     color: white;
 
-    background-image: url(./images/MagnifyingGlass.svg);
+    background-image: url(../images/MagnifyingGlass.svg);
     background-repeat: no-repeat;
     background-position-x: calc(100% - 20px);
     background-position-y: center;
